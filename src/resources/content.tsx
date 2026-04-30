@@ -2,48 +2,33 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Vivan",
+  lastName: "Kushal",
+  name: `Vivan Kushal Heneger`,
+  role: "MSc Data Science & AI | ML Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "vivankushal55@gmail.com",
+  location: "Europe/London",
+  languages: ["English"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Updates on my ML projects and research</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/vivankushal55",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/vivankushal55/",
     essential: true,
   },
   {
@@ -58,25 +43,25 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `${person.name} | ML & AI Portfolio`,
+  description: `Portfolio of Vivan Kushal Heneger — MSc Data Science & AI student building ML systems for real-world impact`,
+  headline: <>Building ML systems that solve real-world problems</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Believe Housing</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Live Industry Project — Awaab's Law ML
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/predictive-damp-mould-risk-model",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Vivan, an MSc Data Science & AI student at <Text as="span" size="xl" weight="strong">Newcastle University</Text>, building production ML for UK housing compliance, computer vision, and generative AI. <br /> Graduating Sept 2026 — open to graduate roles in the UK.
 </>
   ),
 };
@@ -85,7 +70,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `MSc Data Science & AI student at Newcastle University, building ML systems for real-world impact`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +79,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +87,55 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Vivan is an MSc Data Science & AI student at Newcastle University with a focus on production-ready machine learning, computer vision, and generative AI. His current dissertation with Believe Housing builds an ML pipeline for UK Awaab's Law compliance — predicting damp and mould risk in social housing properties. Before his MSc, he worked as a Data Analyst building BI solutions and ETL pipelines, and is a published researcher (ICGCP-2024).
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Believe Housing (via Newcastle University)",
+        timeframe: "Apr 2026 - Present",
+        role: "ML Research Intern — Industry Dissertation",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Building an end-to-end ML pipeline to identify social housing properties at risk of damp and mould — directly supporting compliance with UK Awaab's Law (2023).
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Combining IoT sensor data, asset records, and customer data across thousands of County Durham properties; comparing Logistic Regression, Random Forest, and Gradient Boosting.
+          </>,
+          <>
+            Designing risk tier outputs (Low / Medium / High) for non-technical housing officers, enabling proactive inspections before tenant health is affected.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Spear Insights Technologies",
+        timeframe: "Jan 2025 - Aug 2025",
+        role: "Data Analyst",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Designed and built end-to-end Business Intelligence solutions using SQL and Power BI, enabling data-driven decision-making across business units.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Automated ETL pipelines and built interactive dashboards, reducing manual reporting effort and improving stakeholder access to data.
+          </>,
+          <>
+            Translated business requirements into actionable insights for non-technical stakeholders.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Alnitek Solutions",
+        timeframe: "Aug 2023 - Sep 2023",
+        role: "NLP Intern",
+        achievements: [
+          <>
+            Built a complete Twitter Sentiment Analysis pipeline — API-based data collection, text preprocessing, TF-IDF feature engineering, and supervised classification — delivering automated sentiment labelling at scale.
           </>,
         ],
         images: [],
@@ -155,78 +143,64 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Newcastle University, UK",
+        description: <>MSc Data Science & AI — Sep 2025 to Sep 2026 (Expected 2:1 or above). Modules: Machine Learning, Deep Learning, Advanced AI, Generative AI for Business, Data Visualisation, Image Processing, Statistics, Data Science in the Wild.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Sapthagiri College of Engineering, Bengaluru",
+        description: <>BE Computer Science Engineering — 2020 to 2024. CGPA: 7.9 (First Class). Published at ICGCP-2024: Cardiovascular Disease Risk Prediction Using Machine Learning.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Machine Learning & Deep Learning",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>End-to-end ML pipelines using PyTorch, Scikit-learn, and TensorFlow. Hands-on with Random Forest, Gradient Boosting, SVM, XGBoost, CNNs, LSTMs, and Transformers.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Python", icon: "python" },
+          { name: "PyTorch", icon: "pytorch" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Computer Vision",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Built progressive segmentation pipelines (U-Net → DeepLabV3+ → SegFormer ViT) on FoodSeg103, surpassing published benchmarks. Experience with EfficientNet, ResNet, CLIP, and OpenCV.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "PyTorch", icon: "pytorch" },
+          { name: "Python", icon: "python" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Generative AI & NLP",
+        description: (
+          <>Production-grade Gemini-powered storytelling app with safety guardrails. Fine-tuned Sentence-Transformers achieving 85.2% test accuracy on multimodal idiomaticity (2.5x baseline).</>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
         ],
+        images: [],
+      },
+      {
+        title: "Data Engineering & BI",
+        description: (
+          <>SQL pipelines, ETL automation, and Power BI (DAX) dashboards for cross-functional stakeholders. 8 months of production experience as a Data Analyst.</>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+        ],
+        images: [],
       },
     ],
   },
@@ -235,28 +209,22 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Notes on ML, AI, and applied data science",
+  description: `Technical writing by ${person.name} on machine learning, computer vision, and applied AI`,
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `ML, computer vision, and generative AI projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  title: `Gallery – ${person.name}`,
+  description: `Project visualisations and outputs by ${person.name}`,
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
@@ -275,26 +243,6 @@ const gallery: Gallery = {
     },
     {
       src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
       alt: "image",
       orientation: "vertical",
     },
