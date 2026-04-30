@@ -1,0 +1,62 @@
+---
+title: "ML Pipelines - Classification & Regression at Scale"
+publishedAt: "2026-01-15"
+summary: "Eight production-style ML pipelines on 100K+ US road accident records and bacteria growth datasets - covering EDA, SMOTE, GridSearchCV tuning, and multi-output regression."
+images:
+  - "/images/projects/project-01/cover-04.jpg"
+team:
+  - name: "Vivan Kushal Heneger"
+    role: "MSc Data Science & AI"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/vivankushal55/"
+---
+
+## Overview
+
+Built as part of the Machine Learning module at Newcastle University, this project covers eight end-to-end ML pipelines across two real-world datasets - showing classical ML rigor at scale.
+
+## Dataset 1: US Road Accidents (FARS) - Classification
+
+Worked on **100K+ records** from the Fatality Analysis Reporting System (FARS) - real US road accident data.
+
+### Pipeline Steps
+
+- Exploratory Data Analysis with feature distribution and correlation analysis
+- **SMOTE** for handling severe class imbalance
+- **GridSearchCV** for hyperparameter tuning across all models
+- Comparison of four classifiers:
+  - Logistic Regression
+  - Random Forest
+  - Support Vector Machine (SVM)
+  - Gradient Boosting
+
+### What I Learned
+
+Classical ML is still the right tool for tabular data. Each model required different feature engineering, different scaling decisions, and different validation strategies. This project taught me to **match the model to the problem** rather than defaulting to deep learning.
+
+## Dataset 2: Bacteria Growth - Multi-Output Regression
+
+Built four multi-output regression pipelines predicting bacteria growth parameters: **a, mu, tau, a0**.
+
+### Approach
+
+- Multi-output regression instead of training separate single-target models
+- Cross-validated performance comparison across:
+  - Linear Regression
+  - Random Forest Regressor
+  - Gradient Boosting Regressor
+  - Support Vector Regression
+
+## Results
+
+- Successfully handled severe class imbalance using SMOTE
+- Identified Gradient Boosting as the strongest classifier across most metrics on FARS data
+- Multi-output regression approach captured parameter dependencies that single-output models missed
+
+## Stack
+
+`Python` · `Scikit-learn` · `Pandas` · `NumPy` · `SMOTE` · `Matplotlib` · `Seaborn`
+
+## Why This Project Matters
+
+Tabular data still drives most real-world ML in industry. This project shows I can take messy datasets through the full pipeline - EDA, feature engineering, imbalance handling, hyperparameter tuning, and rigorous evaluation - the way real data science teams work.
