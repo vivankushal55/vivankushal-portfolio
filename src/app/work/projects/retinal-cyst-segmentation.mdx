@@ -1,0 +1,50 @@
+---
+title: "Retinal Cyst Segmentation - Classical OCT Image Processing"
+publishedAt: "2025-12-10"
+summary: "Fully interpretable classical image processing pipeline for retinal cyst detection from OCT scans - no deep learning required, clinically transparent."
+images:
+  - "/images/projects/project-01/cover-05.jpg"
+team:
+  - name: "Vivan Kushal Heneger"
+    role: "MSc Data Science & AI"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/vivankushal55/"
+---
+
+## Overview
+
+Built as part of the Image Processing module at Newcastle University, this project tackles **retinal cyst segmentation from OCT (Optical Coherence Tomography) scans** using only classical image processing - no deep learning.
+
+## Why Classical, Not Deep Learning?
+
+In medical imaging, **interpretability matters more than accuracy alone**. Clinicians need to understand why a model flagged something. A black-box CNN might score higher on benchmarks, but if a radiologist can't trace the decision, it won't get deployed in clinical practice.
+
+This project demonstrates that thoughtful classical pipelines can deliver clinically useful results while remaining fully transparent.
+
+## My Pipeline
+
+A 3-stage classical image processing pipeline:
+
+### 1. CLAHE (Contrast Limited Adaptive Histogram Equalization)
+
+Enhanced local contrast in low-quality OCT scans without amplifying noise. This step alone made cysts visually distinguishable from surrounding tissue.
+
+### 2. Adaptive Thresholding
+
+Used adaptive thresholding instead of global thresholds, accounting for the natural intensity variation across different regions of the OCT scan.
+
+### 3. Morphological Refinement
+
+Applied opening and closing operations to clean up false positives, fill in cyst interiors, and produce clean segmentation boundaries.
+
+## Result
+
+The pipeline successfully segmented retinal cysts across the test dataset - **with every step traceable and explainable to a clinician**. No black-box decisions, no opaque feature maps - just well-justified image processing operations.
+
+## Stack
+
+`Python` · `OpenCV` · `scikit-image` · `NumPy` · `Matplotlib`
+
+## Why This Project Matters
+
+Healthcare ML doesn't always need deep learning. This project taught me that **the right tool for the problem matters more than the trendiest tool**. Classical methods + domain knowledge can outperform black-box models in regulated domains like medical imaging - where interpretability isn't optional.
