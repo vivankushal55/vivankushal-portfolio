@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Vivan",
   lastName: "Kushal",
   name: `Vivan Kushal Heneger`,
-  role: "MSc Data Science & AI | ML Engineer",
+  role: "MSc Data Science & AI | Data Scientist",
   avatar: "/images/avatar.jpg",
   email: "vivankushal55@gmail.com",
   location: "Europe/London",
@@ -98,7 +98,7 @@ const about: About = {
       {
         company: "Believe Housing (via Newcastle University)",
         timeframe: "Apr 2026 - Present",
-        role: "ML Research Intern — Industry Dissertation",
+        role: "Data Science Intern — Industry Dissertation",
         achievements: [
           <>
             Building an end-to-end ML pipeline to identify social housing properties at risk of damp and mould — directly supporting compliance with UK Awaab's Law (2023).
