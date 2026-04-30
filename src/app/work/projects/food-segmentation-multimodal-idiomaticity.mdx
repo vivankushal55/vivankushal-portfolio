@@ -1,0 +1,59 @@
+---
+title: "Food Segmentation & Multimodal Idiomaticity — Advanced AI"
+publishedAt: "2026-03-15"
+summary: "3-stage progressive food segmentation pipeline beating a published academic baseline, plus a multimodal idiomaticity NLP system achieving 85.2% test accuracy."
+images:
+  - "/images/projects/project-01/cover-02.jpg"
+team:
+  - name: "Vivan Kushal Heneger"
+    role: "MSc Data Science & AI"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/vivankushal55/"
+---
+
+## Overview
+
+Built as part of the Advanced AI module at Newcastle University, this project combines two challenging deep learning pipelines: **food image segmentation** and **multimodal idiom grounding**.
+
+## Part 1: Food Segmentation Pipeline
+
+### The Challenge
+
+Food image segmentation is hard — ingredients overlap, lighting varies, and 100+ classes share visual similarities. The published baseline on **FoodSeg103** (104 ingredient classes) was an FPN-ResNet50 architecture.
+
+### My Approach: Progressive Architecture Upgrades
+
+I designed a **3-stage progressive pipeline**, with each upgrade delivering measurable gains:
+
+1. **U-Net (baseline)** — Established the segmentation pipeline end-to-end
+2. **DeepLabV3+ with ASPP** — Added multi-scale context capture for better boundaries
+3. **SegFormer-B2 Vision Transformer** — Captured long-range ingredient co-occurrence patterns that CNN architectures fundamentally cannot
+
+### Result
+
+The final SegFormer ViT model **surpassed the published FPN-ResNet50 academic baseline** on FoodSeg103.
+
+## Part 2: Multimodal Idiomaticity Pipeline
+
+### The Challenge
+
+Idioms ("piece of cake", "spilled the beans") are hard for AI because their meaning isn't literal. Given an idiom and 5 candidate images, can a model rank which image best represents the idiomatic meaning?
+
+### My 4-Stage Approach
+
+1. **Gemini LLM Augmentation** — Tripled training diversity by generating semantically varied descriptions
+2. **Zero-Shot CLIP Baseline** — Established what a pre-trained model could do without fine-tuning
+3. **Fine-Tuned Sentence-Transformer Ranking Model** — The core of the system
+4. **Evaluation Pipeline** — Custom ranking metrics
+
+### Result
+
+**85.2% test accuracy** — more than **2.5x the random baseline**.
+
+## Stack
+
+`PyTorch` · `SegFormer` · `DeepLabV3+` · `U-Net` · `CLIP` · `Sentence-Transformers` · `Gemini API` · `Python`
+
+## Why This Project Matters
+
+Modern computer vision and NLP systems aren't built by picking one model — they're built by designing **progressive pipelines** that justify each architectural decision through evidence.
