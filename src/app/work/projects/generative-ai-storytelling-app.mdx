@@ -1,0 +1,59 @@
+---
+title: "Generative AI Storytelling App - Production LLM System"
+publishedAt: "2026-03-01"
+summary: "Production-ready dual-interface children's storytelling app with Gemini 3.1 Pro - zero safety failures and 100% JSON schema consistency across 50 edge-case tests."
+images:
+  - "/images/projects/project-01/cover-03.jpg"
+team:
+  - name: "Vivan Kushal Heneger"
+    role: "MSc Data Science & AI"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/vivankushal55/"
+---
+
+## Overview
+
+Built as part of the Generative AI for Business module at Newcastle University, this is a production-ready children's storytelling app combining LLM generation, multimodal output, and rigorous safety testing.
+
+## The Problem
+
+Most LLM apps fail in production for two reasons: inconsistent output structure, and unsafe content generation. For a children's storytelling app, both failure modes are unacceptable.
+
+## My Approach
+
+I built a dual-interface app with three production-grade systems working together:
+
+### 1. System-Level Safety Guardrails
+
+Multi-layer prompt engineering with explicit safety constraints, content filters, and audience-appropriate tone enforcement.
+
+### 2. JSON Schema Prompting
+
+Forced Gemini outputs into a strict JSON schema for reliable downstream parsing - no string-matching, no regex hacks.
+
+### 3. Parallel Multi-Modal Generation
+
+Stories, AI illustrations, and text-to-speech narration generated in parallel for fast end-to-end story creation.
+
+## Bias Detection Pipeline
+
+Alongside the app, I built a reproducible bias detection pipeline:
+
+- Rule-based tagging for character demographics
+- NMF topic modelling on 100 generated stories
+- Multi-model LLM validation with temperature experimentation
+- Identified gender and cultural representation gaps systematically
+
+## Results
+
+- **0 safety failures** across 50 edge-case stress tests
+- **100% JSON schema consistency** - never malformed output
+- **End-to-end generation in under 30 seconds** including illustrations and TTS
+
+## Stack
+
+`Gemini 3.1 Pro API` · `Python` · `Streamlit` · `JSON Schema` · `NMF Topic Modelling` · `Prompt Engineering`
+
+## Why This Project Matters
+
+Building an LLM app is easy. Making one that's safe, structured, and production-ready is the actual job. This project taught me how to engineer reliability into stochastic systems - a skill every company building with LLMs in 2026 desperately needs.
