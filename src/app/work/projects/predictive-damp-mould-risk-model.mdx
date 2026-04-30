@@ -1,49 +1,59 @@
 ---
-title: "Predictive Damp & Mould Risk Model — Industry Dissertation"
-publishedAt: "2026-04-20"
-summary: "Live ML pipeline for Believe Housing — flagging social housing properties at risk of damp and mould, aligned with UK Awaab's Law (2023)."
+title: "Food Segmentation & Multimodal Idiomaticity — Advanced AI"
+publishedAt: "2026-03-15"
+summary: "3-stage progressive food segmentation pipeline beating a published academic baseline, plus a multimodal idiomaticity NLP system achieving 85.2% test accuracy."
 images:
-  - "/images/projects/project-01/cover-01.jpg"
+  - "/images/projects/project-01/cover-02.jpg"
 team:
   - name: "Vivan Kushal Heneger"
-    role: "ML Research Intern"
+    role: "MSc Data Science & AI"
     avatar: "/images/avatar.jpg"
     linkedIn: "https://www.linkedin.com/in/vivankushal55/"
 ---
 
 ## Overview
 
-This is my MSc Data Science & AI dissertation in partnership with **Believe Housing Company**, one of the largest social housing providers in the North East of England. The goal: build an end-to-end machine learning pipeline that proactively identifies properties at risk of damp and mould — directly supporting compliance with **UK Awaab's Law (2023)**.
+Built as part of the Advanced AI module at Newcastle University, this project combines two challenging deep learning pipelines: **food image segmentation** and **multimodal idiom grounding**. Both pushed me beyond standard academic baselines into production-style ML thinking.
 
-## The Problem
+## Part 1: Food Segmentation Pipeline
 
-Following the tragic death of Awaab Ishak in 2020, UK social landlords are now legally required to identify and remediate damp and mould before tenant health is affected. The challenge: housing officers need to prioritise inspections across thousands of properties — but reactive maintenance is too slow, and human judgement alone misses high-risk cases.
+### The Challenge
 
-## My Approach
+Food image segmentation is hard — ingredients overlap, lighting varies, and 100+ classes share visual similarities. The published baseline on **FoodSeg103** (104 ingredient classes) was an FPN-ResNet50 architecture.
 
-I am building a complete ML pipeline that combines:
+### My Approach: Progressive Architecture Upgrades
 
-- **IoT sensor data** (temperature, humidity, CO₂)
-- **Asset records** (property age, build type, EPC ratings)
-- **Customer data** (tenancy patterns, repair history)
+I designed a **3-stage progressive pipeline**, with each upgrade delivering measurable gains:
 
-Across **thousands of social housing properties** in County Durham, I am comparing **Logistic Regression**, **Random Forest**, and **Gradient Boosting** classifiers — engineering features around environmental, structural, and tenancy signals.
+1. **U-Net (baseline)** — Established the segmentation pipeline end-to-end
+2. **DeepLabV3+ with ASPP** — Added multi-scale context capture for better boundaries
+3. **SegFormer-B2 Vision Transformer** — Captured long-range ingredient co-occurrence patterns that CNN architectures fundamentally cannot
 
-## The Output
+### Result
 
-The model produces **risk tier outputs (Low / Medium / High)** designed for non-technical housing officers — enabling them to prioritise inspections and interventions without needing to interpret raw model probabilities.
+The final SegFormer ViT model **surpassed the published FPN-ResNet50 academic baseline** on FoodSeg103. Each architectural upgrade was justified through ablation, demonstrating evidence-based architectural decisions rather than blind tool selection.
 
-## Status
+## Part 2: Multimodal Idiomaticity Pipeline
 
-🟡 **In Progress** — April 2026 to September 2026
-- EDA and data integration: Complete
-- Baseline models: In development
-- Deployment plan: Streamlit dashboard for housing officers
+### The Challenge
+
+Idioms ("piece of cake", "spilled the beans") are hard for AI because their meaning isn't literal. Given an idiom and 5 candidate images, can a model rank which image best represents the idiomatic meaning?
+
+### My 4-Stage Approach
+
+1. **Gemini LLM Augmentation** — Tripled training diversity by generating semantically varied descriptions
+2. **Zero-Shot CLIP Baseline** — Established what a pre-trained model could do without fine-tuning
+3. **Fine-Tuned Sentence-Transformer Ranking Model** — The core of the system
+4. **Evaluation Pipeline** — Custom ranking metrics
+
+### Result
+
+**85.2% test accuracy** — more than **2.5x the random baseline**. The fine-tuned ranker meaningfully outperformed both zero-shot CLIP and rule-based approaches.
 
 ## Stack
 
-`Python` · `Scikit-learn` · `Pandas` · `Power BI` · `SQL` · `Matplotlib`
+`PyTorch` · `SegFormer` · `DeepLabV3+` · `U-Net` · `CLIP` · `Sentence-Transformers` · `Gemini API` · `Python`
 
 ## Why This Project Matters
 
-This is one of the first ML systems being built specifically for **Awaab's Law compliance** in UK social housing. It's a real-world example of applied AI improving tenant health outcomes — exactly the intersection of data science, regulation, and social impact I want to build my career around.
+Modern computer vision and NLP systems aren't built by picking one model — they're built by designing **progressive pipelines** that justify each architectural decision through evidence. This project taught me to think like an ML engineer, not just a student following tutorials.
