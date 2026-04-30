@@ -1,5 +1,5 @@
 ---
-title: "Food Segmentation & Multimodal Idiomaticity — Advanced AI"
+title: "Food Segmentation & Multimodal Idiomaticity - Advanced AI"
 publishedAt: "2026-03-15"
 summary: "3-stage progressive food segmentation pipeline beating a published academic baseline, plus a multimodal idiomaticity NLP system achieving 85.2% test accuracy."
 images:
