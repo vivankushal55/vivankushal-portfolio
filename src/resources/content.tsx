@@ -174,11 +174,79 @@ const about: About = {
       {
         title: "Computer Vision",
         description: (
-          <>Built progressive segmentation pipelines (U-Net → DeepLabV3+ → SegFormer ViT) on FoodSeg103, surpassing published benchmarks. Experience with EfficientNet, ResNet, CLIP, and OpenCV.</>
+          <>Built progressive segmentation pipelines (U-Net to DeepLabV3+ to SegFormer ViT) on FoodSeg103, surpassing published benchmarks. Experience with EfficientNet, ResNet, CLIP, and OpenCV.</>
         ),
         tags: [
           { name: "PyTorch", icon: "pytorch" },
           { name: "Python", icon: "python" },
         ],
         images: [],
-      }
+      },
+      {
+        title: "Generative AI & NLP",
+        description: (
+          <>Production-grade Gemini-powered storytelling app with safety guardrails. Fine-tuned Sentence-Transformers achieving 85.2% test accuracy on multimodal idiomaticity (2.5x baseline).</>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+        ],
+        images: [],
+      },
+      {
+        title: "Data Engineering & BI",
+        description: (
+          <>SQL pipelines, ETL automation, and Power BI (DAX) dashboards for cross-functional stakeholders. 8 months of production experience as a Data Analyst.</>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+        ],
+        images: [],
+      },
+    ],
+  },
+};
+
+const blog: Blog = {
+  path: "/blog",
+  label: "Blog",
+  title: "Notes on ML, AI, and applied data science",
+  description: `Technical writing by ${person.name} on machine learning, computer vision, and applied AI`,
+};
+
+const work: Work = {
+  path: "/work",
+  label: "Work",
+  title: `Projects – ${person.name}`,
+  description: `ML, computer vision, and generative AI projects by ${person.name}`,
+};
+
+const gallery: Gallery = {
+  path: "/gallery",
+  label: "Gallery",
+  title: `Gallery – ${person.name}`,
+  description: `Project visualisations and outputs by ${person.name}`,
+  images: [
+    {
+      src: "/images/gallery/horizontal-1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery };
