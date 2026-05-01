@@ -207,6 +207,7 @@ const about: About = {
 };
 
 const blog: Blog = {
+  display: false,
   path: "/blog",
   label: "Blog",
   title: "Notes on ML, AI, and applied data science",
@@ -221,6 +222,7 @@ const work: Work = {
 };
 
 const gallery: Gallery = {
+  display: false,
   path: "/gallery",
   label: "Gallery",
   title: `Gallery – ${person.name}`,
